@@ -4,6 +4,7 @@ import Faq from "../components/Faq";
 import Info from "../components/Info";
 import SectionOne from "../components/sections/SectionOne";
 import Subscribe from "../components/sections/Subscribe";
+import Whitepaper from "../components/Whitepaper";
 
 export default function EventOwners() {
     return (
@@ -11,6 +12,7 @@ export default function EventOwners() {
             <SectionOne />
             {/* <About /> */}
             <Blueprint />
+            <Whitepaper />
             <Info />
             <Subscribe />
             <Faq />

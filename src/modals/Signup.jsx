@@ -97,7 +97,7 @@ export default function Signup() {
                 </div>
             </Popup>
             <Popup trigger={createPassword}>
-                <h3>Generate ID</h3>
+                <h3>Create Password</h3>
                 <CopyToClipboard text={socialId}>
                     <h4 onClick={handleCopyClick} className="socialId">{socialId} <FontAwesomeIcon icon={faCopy} /></h4>
                 </CopyToClipboard>

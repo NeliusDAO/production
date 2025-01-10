@@ -1,7 +1,7 @@
-// import HowToGet from "../components/HowToGet";
+import HowToGet from "../components/HowToGet";
 import { useContext } from "react"
 import { ToggleContext } from "../components/ToggleContext";
-import Soon from "../components/Soon";
+// import Soon from "../components/Soon";
 
 export default function TokenHolders() {
     const { isToggled } = useContext(ToggleContext);
@@ -13,8 +13,8 @@ export default function TokenHolders() {
 
     return (
         <div className="getting" id="getting" style={!isToggled ? dark : {}}>
-            {/* <HowToGet /> */}
-            <Soon />
+            <HowToGet />
+            {/* <Soon /> */}
         </div>
     )
 };

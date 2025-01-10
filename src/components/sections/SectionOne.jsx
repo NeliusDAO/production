@@ -13,9 +13,10 @@ export default function SectionOne() {
         color: 'white'
     }
 
+// #02AFF3
     const text = {
         color: 'white',
-        background: 'linear-gradient(-45deg, rgb(5, 20, 60), rgb(5, 20, 60), rgb(98, 146, 212), rgb(5, 20, 60), rgb(5, 20, 60))',
+        background: 'linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #FEFEFE, #FEFEFE)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         backgroundClip: 'text',
@@ -28,7 +29,7 @@ export default function SectionOne() {
                 <div className="circleBackground"></div>
                 <div className="sectionOneFrame">
                     <div className="sectionOneHeadText">
-                        <p className="headText">Get <span style={!isToggled ? text : {}} className="textOne">Funded</span>, Get <span className="textOne">Public</span></p>
+                        <p className="headText">Get <span style={!isToggled ? text : {}} className="textOne">Funded</span>, Get <span style={!isToggled ? text : {}} className="textOne">Public</span></p>
                         <p className="headText">With Nelius</p>
                     </div>
                     <div className="sectionOneParagraph">

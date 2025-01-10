@@ -81,10 +81,18 @@ const InfoImg = () => {
         };
     }, []);
 
+    const text = {
+        color: 'white',
+        background: 'linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #02AFF3, #FEFEFE)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+    };
+
     return (
         <div className="imageGrids">
             <div id="info_back">
-                <p id="infoText" className="infoText">Crite<span className="textOne">ria For Events Nomin</span>ation</p>
+                <p id="infoText" className="infoText textOne" style={!isToggled ? text : {}}>Criteria For Events Nomination</p>
                 {isMobile ? (
                     <p id="info_backP">All you need to<br></br>nominate your event</p>
                 ) : (
@@ -96,7 +104,7 @@ const InfoImg = () => {
                 <img src={!isToggled ? PlantDark : Plant} alt="Large images" style={styles.image} />
             </div>
             <div id="info_back">
-                <p id="infoText" className="infoText">Gettin<span className="textTwo">g Your Events</span> Noticed</p>
+                <p id="infoText" className="infoText textTwo">Getting Your Events Noticed</p>
                 {isMobile ? (
                     <p id="info_backP">Simple actions for event<br></br>owners / facilitators</p>) : (
                     <p id="info_backP">Simple actions for event owners / facilitators</p>

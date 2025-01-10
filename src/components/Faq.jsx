@@ -4,7 +4,7 @@ import { ToggleContext } from './ToggleContext';
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
 
     return (
-        <div className="faq-item" style={{color:'black'}}>
+        <div className="faq-item" style={{ color: 'black' }}>
             <div className="faq-question" onClick={onClick}>
                 <span className="faq-icon" onClick={onClick}>{isOpen ? '-' : '+'}</span>
                 <span className='question'>{question}</span>
@@ -66,13 +66,16 @@ export default function Faq() {
 
     return (
         <div className="faq" style={!isToggled ? styles : {}}>
+            <div className='hr'>
+                <hr />
+            </div>
             <div className="faq-head">
                 <p className="faqHeadText" style={!isToggled ? styles : {}}>
                     Frequently Asked <span className="textOne">Questions</span>
                 </p>
             </div>
             <div className="faq-info">
-                <p className='small-faq' style={{color : !isToggled ? "white" : "black"}}>FAQ</p>
+                <p className='small-faq' style={{ color: !isToggled ? "white" : "black" }}>FAQ</p>
                 <Dropdown />
             </div>
         </div>

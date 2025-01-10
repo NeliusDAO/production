@@ -14,6 +14,14 @@ export default function Blueprint() {
         color: 'white',
     };
 
+    const text = {
+        color: 'white',
+        background: 'linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #FEFEFE, #FEFEFE)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+    };
+
     const blueprints = {
         zero: "",
         one: "Original holders of Nelius nominates a group of events to be donated to.",
@@ -26,7 +34,7 @@ export default function Blueprint() {
     return (
         <div className="blueprint" id="blueprint" style={!isToggled ? colorSwitch : {}}>
             <p className="blueprintText">
-                The <span className="textOne">Nelius</span> Blueprint
+                The <span style={!isToggled ? text : {}} className="textOne">Nelius</span> Blueprint
             </p>
             <div className="blueprintStage" id="blueprintStage">
                 <div className="stageCards">

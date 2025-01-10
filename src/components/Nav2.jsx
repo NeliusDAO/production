@@ -48,7 +48,7 @@ export default function Nav2({ about, home }) {
         color: 'white',
     };
     return (
-        <nav style={!isToggled ? colorSwitch : {}}>
+        <nav id='nav' style={!isToggled ? colorSwitch : {}}>
             <div className="logo">
                 <img src={Logo} alt="logo" className="logo-img" id='logo-img' />
             </div>
