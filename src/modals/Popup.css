@@ -71,7 +71,7 @@
 
 
 .p {
-    background: linear-gradient(-45deg, rgb(5, 20, 60), rgb(5, 20, 60), rgb(98, 146, 212), rgb(5, 20, 60), rgb(5, 20, 60));
+    background: linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #cdd6d8, #cdd6d8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -96,7 +96,7 @@
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, rgb(5, 20, 60), rgb(98, 146, 212), rgb(98, 146, 212), rgb(5, 20, 60));
+    background: linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #cdd6d8, #cdd6d8);
 }
 
 .signInInput {

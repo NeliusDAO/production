@@ -9,7 +9,7 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 export default function Signup() {
     const [signUp, setSignUp] = useState(true);
     const [generateId, setGenerateId] = useState(false);
-    const [generateKeyword, setGenerateKeyword] = useState(false);
+    const [generateKeyword,] = useState(false);
     const [createPassword, setCreatePassword] = useState(false);
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -52,7 +52,7 @@ export default function Signup() {
                             setGenerateId(true),
                             setSignUp(false)
                         )
-                    }} disabled={isDisabled} className="modalButton">Sign Up</button>
+                    }} disabled={isDisabled} className="buttonComponentModal">Sign Up</button>
                     <p>
                         <Link to="/" className="loginLink">Back to Homepage</Link>
                     </p>
@@ -92,7 +92,7 @@ export default function Signup() {
                                 setGenerateId(false),
                                 setCreatePassword(true)
                             )
-                        }} disabled={!isButtonEnabled} className="modalButton">Generate ID</button>
+                        }} disabled={!isButtonEnabled} className="buttonComponentModal">Generate ID</button>
                     </div>
                 </div>
             </Popup>
@@ -137,10 +137,10 @@ export default function Signup() {
                     <br />
                     <button onClick={() => {
                         return (
-                            setGenerateKeyword(true),
+                            // setGenerateKeyword(true),
                             setCreatePassword(false)
                         )
-                    }} disabled={isDisabled} className="modalButton">Register</button>
+                    }} disabled={isDisabled} className="buttonComponentModal"><Link to='/advert' style={{color : 'white',}}>Register</Link></button>
                 </form>
             </Popup>
             <Popup trigger={generateKeyword}>

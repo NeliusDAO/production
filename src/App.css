@@ -332,7 +332,8 @@ input:checked+.slider:before {
 }
 
 .textOne {
-  background: linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #cdd6d8, #cdd6d8);
+  /* Simplified gradient background for .textOne */
+  background: linear-gradient(-45deg, #FEFEFE, #02AFF3, #cdd6d8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1251,7 +1252,7 @@ footer {
   opacity: 0px;
 }
 
-.modalButton {
+.buttonComponentModal {
   width: 180px;
   height: 45px;
   font-size: 16px;
