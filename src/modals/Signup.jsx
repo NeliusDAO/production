@@ -135,12 +135,14 @@ export default function Signup() {
                         </p>
                     )}
                     <br />
+                    <Link to='/advert'>
                     <button onClick={() => {
                         return (
                             // setGenerateKeyword(true),
                             setCreatePassword(false)
                         )
-                    }} disabled={isDisabled} className="buttonComponentModal"><Link to='/advert' style={{color : 'white',}}>Register</Link></button>
+                    }} disabled={isDisabled} className="buttonComponentModal">Register</button>
+                    </Link>
                 </form>
             </Popup>
             <Popup trigger={generateKeyword}>
@@ -153,7 +155,7 @@ export default function Signup() {
                 <p className="socialId">{keywords}</p>
                 {alert && <div className="alert">Copied Keywords To Clipboard</div>}
                 <CopyToClipboard text={keywords}>
-                    <button onClick={handleCopyClick} style={{cursor : 'grab'}} className="buttonComponent extra">Copy To Clipboard</button>
+                    <button onClick={handleCopyClick} style={{ cursor: 'grab' }} className="buttonComponent extra">Copy To Clipboard</button>
                 </CopyToClipboard>
             </Popup>
         </div>
