@@ -3,6 +3,7 @@ import { ToggleContext } from "../components/ToggleContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 import './Popup.css'
+import Submit from "../assets/Submit";
 
 export default function Login() {
     const { isToggled } = useContext(ToggleContext);
@@ -70,7 +71,8 @@ export default function Login() {
                     />
                 </div>
             </div>
-            <div className="btnFrame"><button className="signIn" style={!isToggled ? dark : {}}>Sign In</button></div>
+            <div className="btnFrame"><Submit button='Login' /></div>
+            {/* <div className="btnFrame"><button className="signIn" style={!isToggled ? dark : {}}>Sign In</button></div> */}
         </div>
     );
 }

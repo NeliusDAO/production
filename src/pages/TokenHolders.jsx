@@ -7,7 +7,7 @@ export default function TokenHolders() {
     const { isToggled } = useContext(ToggleContext);
 
     const dark = {
-        backgroundColor : 'black',
+        backgroundColor : '#010101',
         color : 'white'
     }
 

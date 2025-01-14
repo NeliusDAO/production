@@ -59,7 +59,7 @@ export default function Faq() {
 
     const styles = {
         // backgroundColor: '#0c0c3f'
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white'
     }
     const { isToggled } = useContext(ToggleContext);

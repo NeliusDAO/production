@@ -9,13 +9,12 @@ export default function Subscribe() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const dark = {
-        // backgroundColor: '#0c0c3f',
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white',
     }
 
     const mail = {
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white',
         border: 'white solid 1px'
     }

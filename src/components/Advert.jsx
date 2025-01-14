@@ -14,7 +14,7 @@ export default function Advert() {
     ]
     const eventKeyword = `${options[0].text} ${options[0].keywords}`
     const dark = {
-        backgroundColor: "black",
+        backgroundColor: "#010101",
         color: "white",
     }
 

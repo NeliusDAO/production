@@ -13,7 +13,7 @@ export default function HowToGet() {
 
     const dark = {
         color: "white",
-        backgroundColor: "black",
+        backgroundColor: "#010101",
     }
 
     const getting = [
@@ -84,7 +84,7 @@ export default function HowToGet() {
             </div>
             <div className="acct">
                 <Link to="/signup">
-                    <button className='account-btn' style={!isToggled ? dark : {}}>Create Account</button>
+                    <button className='account-btn' style={!isToggled ? {color : "white"} : {}}>Create Account</button>
                 </Link>
             </div>
         </div>

@@ -153,7 +153,7 @@ export default function Signup() {
                 <p className="socialId">{keywords}</p>
                 {alert && <div className="alert">Copied Keywords To Clipboard</div>}
                 <CopyToClipboard text={keywords}>
-                    <button onClick={handleCopyClick} className="buttonComponent extra">Copy To Clipboard</button>
+                    <button onClick={handleCopyClick} style={{cursor : 'grab'}} className="buttonComponent extra">Copy To Clipboard</button>
                 </CopyToClipboard>
             </Popup>
         </div>

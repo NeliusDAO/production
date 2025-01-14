@@ -6,7 +6,7 @@ import Download from "../assets/img/logo/Download Document.png"
 export default function Whitepaper() {
     const { isToggled } = useContext(ToggleContext);
     const dark = {
-        backgroundColor: "black",
+        backgroundColor: "#010101",
         color: "white",
     }
 

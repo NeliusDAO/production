@@ -9,7 +9,7 @@ export default function SectionOne() {
     const { isToggled } = useContext(ToggleContext);
 
     const background = {
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white'
     }
 

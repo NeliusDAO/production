@@ -6,7 +6,7 @@ export default function About() {
 
     const dark = {
         // backgroundColor: '#0c0c3f',
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white'
     }
 

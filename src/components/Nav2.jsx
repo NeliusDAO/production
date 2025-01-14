@@ -26,14 +26,14 @@ export default function Nav2({ about, home }) {
         borderRadius: '20px',
         border: 'none',
         background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), rgb(94, 110, 234))',
-        color: 'black',
+        color: '#010101',
     };
 
     const stylesInactive = (isToggled) => ({
         borderRadius: '20px',
         border: 'none',
         background: 'transparent',
-        color: isToggled ? 'black' : 'white',
+        color: isToggled ? '#010101' : 'white',
     });
 
     // const styles1 = {
@@ -44,13 +44,13 @@ export default function Nav2({ about, home }) {
     // }
 
     const colorSwitch = {
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white',
     };
     return (
         <nav id='nav' style={!isToggled ? colorSwitch : {}}>
             <div className="logo">
-                <img src={Logo} alt="logo" className="logo-img" id='logo-img' />
+                <Link to="/"><img src={Logo} alt="logo" className="logo-img" id='logo-img' /></Link>
             </div>
             <div className={`nav-list ${isOpen ? 'open' : ''}`}>
                 <ul className="lists">

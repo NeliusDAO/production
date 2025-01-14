@@ -9,8 +9,7 @@ import { ToggleContext } from './ToggleContext';
 export default function Blueprint() {
     const { isToggled } = useContext(ToggleContext);
     const colorSwitch = {
-        // backgroundColor: '#0c0c3f',
-        backgroundColor: 'black',
+        backgroundColor: '#010101',
         color: 'white',
     };
 
