@@ -1072,10 +1072,17 @@ footer {
   padding: 0px 100px;
   display: grid;
   place-content: center;
-  height: 85vh;
+  height: 100vh;
+  /* width: 100vw; */
+}
+
+
+#print {
+  width: 100%;
 }
 
 .printFrame {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -1085,7 +1092,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 100%;
 }
 
 .num {
@@ -1096,9 +1103,14 @@ footer {
 }
 
 @media screen and (max-width : 700px) {
+  #print {
+    margin-top: 250px;
+    margin-bottom: 100px;
+  }
+
   .printFrame {
     display: block;
-    align-items: center;
+    width: 100%;
   }
 
   .getting {
@@ -1122,6 +1134,11 @@ footer {
     z-index: 1;
     width: 120px;
     height: 120px;
+  }
+
+  #acct {
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1150,12 +1167,6 @@ footer {
   }
 }
 
-.printFrame .card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 @media screen and (min-width : 821px) and (max-width : 1024px) {
   #getting {
     padding: 0px 100px;
@@ -1166,7 +1177,7 @@ footer {
 
   #texts {
     text-align: inherit;
-    font-size: 14px;
+    font-size: 1vw;
   }
 
   .num {
@@ -1180,9 +1191,22 @@ footer {
 .printFrame .card {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
+/* .printFrame .card {
+  display: flex;
+  align-items: center;
+} */
+
 /* SIGNUP */
+
+@media screen and (max-width : 700px) {
+  #acct {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+}
 
 .modal-overlay {
   position: fixed;
@@ -1405,7 +1429,7 @@ footer {
   #eventKeywordHead #pTwo {
     /* margin: 0px 0px 32px 0px; */
     text-align: center;
-    font-size: 12px;
+    font-size: 4vw;
     font-weight: 400;
   }
 

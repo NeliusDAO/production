@@ -135,7 +135,7 @@ export default function Signup() {
                         </p>
                     )}
                     <br />
-                    <Link to='/advert'>
+                    <Link to='/dashboard'>
                     <button onClick={() => {
                         return (
                             // setGenerateKeyword(true),

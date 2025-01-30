@@ -97,7 +97,7 @@ export default function Nav2({ about, home }) {
                         >
                             <img
                                 src={isToggled ? "https://img.icons8.com/?size=100&id=TCnKnYZFoOzM&format=png&color=000000" : "https://img.icons8.com/?size=100&id=TCnKnYZFoOzM&format=png&color=FFFFFF"}
-                                alt="telegram"
+                                alt="telegram_icon"
                                 className="social-icon"
                             />
 

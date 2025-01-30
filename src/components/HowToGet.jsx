@@ -66,7 +66,7 @@ export default function HowToGet() {
     ]
 
     return (
-        <div className="print" style={!isToggled ? dark : {}}>
+        <div className="print" id="print" style={!isToggled ? dark : {}}>
             <div className="printFrame">
                 {getting.map((texts, index) => {
                     return (
@@ -82,7 +82,7 @@ export default function HowToGet() {
                     )
                 })}
             </div>
-            <div className="acct">
+            <div className="acct" id="acct">
                 <Link to="/signup">
                     <button className='account-btn' style={!isToggled ? {color : "white"} : {}}>Create Account</button>
                 </Link>

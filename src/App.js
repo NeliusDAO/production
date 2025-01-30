@@ -8,7 +8,7 @@ import TokenHolders from './pages/TokenHolders';
 import Signup from './modals/Signup';
 import { useLocation } from 'react-router-dom';
 import Login from './modals/Login';
-import Advert from './components/Advert';
+import Dashboard from './components/Dashboard';
 
 function App() {
 
@@ -36,7 +36,7 @@ const Pages = () => {
         <Route path="/" element={<EventOwners />} />
         <Route path="/token-holders" element={<TokenHolders />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/advert" element={<Advert />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </>

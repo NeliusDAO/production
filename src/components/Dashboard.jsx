@@ -3,7 +3,7 @@ import { ToggleContext } from "./ToggleContext";
 import Image from "../assets/img/logo/PublicImg.png";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-export default function Advert() {
+export default function Dashboard() {
     const { isToggled } = useContext(ToggleContext);
     const totalScore = 450
     const options = [
