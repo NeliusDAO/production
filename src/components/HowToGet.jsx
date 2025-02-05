@@ -84,7 +84,7 @@ export default function HowToGet() {
             </div>
             <div className="acct" id="acct">
                 <Link to="/signup">
-                    <button className='account-btn' style={!isToggled ? {color : "white"} : {}}>Create Account</button>
+                    <button className='account-btn' style={{color : 'white'}}>Create Account</button>
                 </Link>
             </div>
         </div>

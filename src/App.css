@@ -1817,7 +1817,7 @@ hr {
 }
 
 .advertTextSelect {
-  width: 200px;
+  width: 250px;
   height: 50px;
   text-align: center;
   border: none;
@@ -1825,6 +1825,9 @@ hr {
   outline: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .advertText {

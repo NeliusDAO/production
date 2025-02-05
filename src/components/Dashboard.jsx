@@ -69,7 +69,7 @@ export default function Dashboard() {
                 <form>
                     <select className="advertTextSelect" id="advertTextSelect" style={{ backgroundColor: "white", margin: "0px 0px 30px 0px" }} value={selectedOption} onChange={handleOptionChange}>
                         {socialOption.map((social) => (
-                            <option key={social}>{social}</option>
+                            <option className="socialOption" key={social}>{social}</option>
                         ))}
                     </select>
                     <div className={`input-wrapper ${selectedOption !== "Select an option" ? "visible" : ""}`}>

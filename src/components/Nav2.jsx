@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { ToggleContext } from './ToggleContext';
 import Logo from '../assets/img/logo/nelius_logo_nav.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +12,30 @@ export default function Nav2({ about, home }) {
     const location = useLocation();
     const currentPath = location.pathname
 
+    const menuRef = useRef(null);
+
     const toggleHamburger = () => {
         setIsOpen(!isOpen);
     };
+
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    const handleScroll = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     // const styles = {
     //     borderRadius: '20px',
@@ -25,7 +46,7 @@ export default function Nav2({ about, home }) {
     const stylesActive = {
         borderRadius: '20px',
         border: 'none',
-        background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), rgb(94, 110, 234))',
+        background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), #02AFF3)',
         color: '#010101',
     };
 
@@ -48,7 +69,7 @@ export default function Nav2({ about, home }) {
         color: 'white',
     };
     return (
-        <nav id='nav' style={!isToggled ? colorSwitch : {}}>
+        <nav id='nav' style={!isToggled ? colorSwitch : {}} ref={menuRef}>
             <div className="logo">
                 <Link to="/"><img src={Logo} alt="logo" className="logo-img" id='logo-img' /></Link>
             </div>
