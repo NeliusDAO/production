@@ -469,7 +469,7 @@ input:checked+.slider:before {
   .blueprint .blueprintText {
     font-size: x-large;
     font-weight: 500;
-    margin: 0;
+    margin: 50px 0px 0px 0px;
   }
 
   .stageCard #cardText {
@@ -520,7 +520,7 @@ input:checked+.slider:before {
 }
 
 .blueprint {
-  padding: 100px 100px 0 100px;
+  padding: 50px 100px 0 100px;
 }
 
 .blueprintText {
@@ -1065,7 +1065,6 @@ footer {
 }
 
 
-
 /* PAGE TWO */
 
 .getting {
@@ -1114,7 +1113,7 @@ footer {
   }
 
   .getting {
-    padding: 0px 70px 0px 70px;
+    /* padding: 90px 70px 90px 70px; */
     display: grid;
     place-content: center;
     height: 100vh;
@@ -1194,19 +1193,7 @@ footer {
   gap: 20px;
 }
 
-/* .printFrame .card {
-  display: flex;
-  align-items: center;
-} */
-
 /* SIGNUP */
-
-@media screen and (max-width : 700px) {
-  #acct {
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
-}
 
 .modal-overlay {
   position: fixed;
@@ -1277,13 +1264,14 @@ footer {
 }
 
 .buttonComponentModal {
-  width: 180px;
-  height: 45px;
+  /* width: 180px; */
+  /* height: 45px; */
   font-size: 16px;
   border: none;
   border-radius: 25px;
   color: white;
   background: #02AFF3;
+  padding: 15px 40px;
 }
 
 .alert {
@@ -1308,7 +1296,7 @@ footer {
 
 .copy {
   padding: 0px 0px 20px 0px;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .extra {
@@ -1319,7 +1307,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .socialId {

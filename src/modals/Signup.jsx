@@ -60,7 +60,7 @@ export default function Signup() {
                 </div>
             </Popup>
             <Popup trigger={generateId}>
-                <div className="popupOne">
+                <div className="popupOne" id="popupOne">
                     <h3>Seed Phrase</h3>
                     <h4>Make Sure To Copy Your PassPhrase As It Would Be Needed To Retrieve Your Account</h4>
                     <div className="keywords">
@@ -81,7 +81,7 @@ export default function Signup() {
                                     handleCopyClick(),
                                     handleEnablerButtonClick()
                                 )
-                            }} style={{ display: "flex", justifyContent: "center" }} className="copy">Click To Copy</h3>
+                            }} style={{ display: "flex", justifyContent: "center", textTransform : "uppercase" }} className="copy">Click To Copy</h3>
                         </CopyToClipboard>
                     </div>
                     {alert && <div className="alert">Copied PassPhrase To Clipboard</div>}
@@ -105,10 +105,16 @@ export default function Signup() {
                 {/* Conditionally render the alert */}
                 {alert && <div className="alert">Copied Social Id To Clipboard</div>}
                 <form>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" onChange={(e) => setPassword(e.target.value)} className="inputPass" />
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)} className="inputPass" />
+                    <div>
+                        <div className="formInfo">
+                            <label htmlFor="password">Password</label>
+                            <input type="password" id="password" onChange={(e) => setPassword(e.target.value)} className="inputPass" />
+                        </div>
+                        <div className="formInfo">
+                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)} className="inputPass" />
+                        </div>
+                    </div>
                     {(password?.length < 5 || confirmPassword?.length < 5) && (
                         <p className="passError" style={{ color: "red" }}>
                             ⓘ Must be at least 5 characters!

@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext,} from "react";
 import { ToggleContext } from "./ToggleContext";
 import Image from "../assets/img/logo/PublicImg.png";
 import CopyToClipboard from "react-copy-to-clipboard";
+import Dropdown from "./Dropdown";
 
 export default function Dashboard() {
     const { isToggled } = useContext(ToggleContext);
@@ -18,12 +19,13 @@ export default function Dashboard() {
         color: "white",
     }
 
-    const [socialOption] = useState(["Select an option", "Facebook", "Instagram", "Twitter (X)", "Youtube"]);
-    const [selectedOption, setSelectedOption] = useState(socialOption[0]);
-
-    const handleOptionChange = (event) => {
-        setSelectedOption(event.target.value);
-    };
+    const socialOptions = [
+        { social: "Facebook" },
+        { social: "Twitter" },
+        { social: "Instagram" },
+        { social: "Youtube" },
+        { social: "TikTok" },
+    ];
 
     return (
         <div className="advert" id="advert" style={!isToggled ? dark : {}}>
@@ -67,22 +69,7 @@ export default function Dashboard() {
                 <p className="advertSelect textOne" id="advertSelect">Become a Nelius Advertiser</p>
                 <p>Input your Social media username</p>
                 <form>
-                    <select className="advertTextSelect" id="advertTextSelect" style={{ backgroundColor: "white", margin: "0px 0px 30px 0px" }} value={selectedOption} onChange={handleOptionChange}>
-                        {socialOption.map((social) => (
-                            <option className="socialOption" key={social}>{social}</option>
-                        ))}
-                    </select>
-                    <div className={`input-wrapper ${selectedOption !== "Select an option" ? "visible" : ""}`}>
-                        {selectedOption !== "Select an option" && (
-                            <input
-                                type="text"
-                                placeholder={`Enter ${selectedOption} username`}
-                                className="advertText"
-                                id="advertText"
-                            />
-                        )}
-                    </div>
-                    <br />
+                    <Dropdown socialOptions={socialOptions} />
                     <button disabled>Connect</button>
                 </form>
             </div>

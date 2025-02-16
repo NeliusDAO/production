@@ -5,6 +5,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-20px);
     animation: slideDown 0.5s ease-out forwards;
+    margin: 0px 20px;
+}
+
+.formInfo {
+    padding-bottom: 20px;
+    display: grid;
+    gap: 20px;
 }
 
 @keyframes fadeIn {
@@ -112,6 +119,7 @@
 }
 
 @media screen and (max-width : 700px) {
+
     #login {
         padding: 0px;
         display: grid;
