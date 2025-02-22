@@ -15,15 +15,15 @@ export default function Dropdown({ socialOptions }) {
 
     const handleOptionClick = (social) => {
         setSelectedSocial(social);
-        setIsHovered(false);
         setIsFormVisible(true);
+        setIsHovered(false);
     };
 
     const selectStyle = {
         width: "max-content",
         padding: "10px 20px",
         backgroundColor: "#02AFF3",
-        color : "white",
+        color: "white",
         borderRadius: "50px",
         cursor: "pointer",
         textAlign: "center",
