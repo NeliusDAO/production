@@ -9,7 +9,6 @@ import Signup from './modals/Signup';
 import { useLocation } from 'react-router-dom';
 import Login from './modals/Login';
 import Dashboard from './components/Dashboard';
-import CustomTryout from './components/CustomTryout';
 
 function App() {
 
@@ -23,7 +22,6 @@ function App() {
         <Routes>
           <Route path='/*' element={<Pages/>} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/custom" element={<CustomTryout />} />
         </Routes>
       </div>
     </ToggleProvider>

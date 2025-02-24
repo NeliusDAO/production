@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ToggleContext } from "./ToggleContext";
 
 export default function Dropdown({ socialOptions }) {
+    const { isToggled } = useContext(ToggleContext)
     const [isHovered, setIsHovered] = useState(false);
     const [selectedSocial, setSelectedSocial] = useState("");
     const [isFormVisible, setIsFormVisible] = useState(false);
@@ -48,6 +50,7 @@ export default function Dropdown({ socialOptions }) {
         padding: "10px 20px",
         width: "100%",
         textAlign: "center",
+        color: isToggled ? "black" : "black",
         cursor: "pointer",
         transition: "background-color 0.3s ease",
     };
@@ -84,7 +87,7 @@ export default function Dropdown({ socialOptions }) {
                             className="options"
                             onClick={() => handleOptionClick(socials.social)}
                             style={optionItemStyle}
-                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#f0f0f0"}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#02AFF3"}
                             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#fff"}
                         >
                             {socials.social}
