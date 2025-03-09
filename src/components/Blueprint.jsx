@@ -39,11 +39,11 @@ export default function Blueprint() {
                 <div className="stageCards">
                     <p>{blueprints.zero[1]}</p>
                 </div>
-                <div className="stageCard" style={{}}>
+                <div className="stageCard" id="stageCard" style={{}}>
                     <p style={{}} className="cardText" id="cardText">{blueprints.one}</p>
                     <img src={One} alt="One" className="blueprintImage" id="blueprintImage" />
                 </div>
-                <div className="stageCard" style={{}}>
+                <div className="stageCard" id="stageCard" style={{}}>
                     <p style={{}} className="cardText" id="cardText">{blueprints.two}</p>
                     <img src={Two} alt="Two" className="blueprintImage" id="blueprintImage" />
                 </div>
@@ -53,11 +53,11 @@ export default function Blueprint() {
                 <div className="stageCards">
                     <p>{blueprints.zero[1]}</p>
                 </div>
-                <div className="stageCard" style={{}}>
+                <div className="stageCard" id="stageCard" style={{}}>
                     <p style={{}} className="cardText" id="cardText">{blueprints.three}</p>
                     <img src={Three} alt="Three" className="blueprintImage" id="blueprintImage" />
                 </div>
-                <div className="stageCard" style={{}}>
+                <div className="stageCard" id="stageCard" style={{}}>
                     <p style={{}} className="cardText" id="cardText">{blueprints.four}</p>
                     <img src={Four} alt="Four" className="blueprintImage" id="blueprintImage" />
                 </div>
@@ -67,7 +67,7 @@ export default function Blueprint() {
                 <div className="stageCards">
                     <p>{blueprints.zero[1]}</p>
                 </div>
-                <div className="stageCard" style={{}}>
+                <div className="stageCard" id="stageCard" style={{}}>
                     <p style={{}} className="cardText" id="cardText">{blueprints.five}</p>
                     <img src={Five} alt="Five" className="blueprintImage" id="blueprintImage"  />
                 </div>

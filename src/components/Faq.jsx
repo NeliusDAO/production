@@ -7,9 +7,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         <div className="faq-item" style={{ color: 'black' }}>
             <div className="faq-question" onClick={onClick}>
                 <span className="faq-icon" onClick={onClick}>{isOpen ? '-' : '+'}</span>
-                <span className='question'>{question}</span>
+                <span className='question' id='question'>{question}</span>
             </div>
-            {isOpen && <div className="faq-answer">{answer}</div>}
+            {isOpen && <div className="faq-answer" id='faq-answer'>{answer}</div>}
         </div>
     );
 };

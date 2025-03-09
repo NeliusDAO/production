@@ -34,9 +34,9 @@ const Pages = () => {
       <Nav2 about='Token Holders' home='Event Owners' />
       <Routes>
         <Route path="/" element={<EventOwners />} />
-        <Route path="/token-holders" element={<TokenHolders />} />
+        <Route path="/create-account" element={<TokenHolders />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/token-holders" element={<Dashboard />} />
       </Routes>
       <Footer />
     </>

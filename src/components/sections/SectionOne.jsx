@@ -29,8 +29,8 @@ export default function SectionOne() {
                 <div className="circleBackground"></div>
                 <div className="sectionOneFrame">
                     <div className="sectionOneHeadText">
-                        <p className="headText">Get <span style={!isToggled ? text : {}} className="textOne">Funded</span>, Get <span style={!isToggled ? text : {}} className="textOne">Public</span></p>
-                        <p className="headText">With Nelius</p>
+                        <p className="headText">More <span style={!isToggled ? text : {}} className="textOne">Publicity</span>, More <span style={!isToggled ? text : {}} className="textOne">Funding</span></p>
+                        <p className="headText">With <span className="textOne">Nelius</span></p>
                     </div>
                     <div className="sectionOneParagraph">
                         <p className="headParagraph">With Nelius, your events can get effective publicity and funding.</p>

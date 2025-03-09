@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { ToggleContext } from "./ToggleContext";
+import { ToggleContext } from "./ToggleContext"
 
 export default function Dropdown({ socialOptions }) {
     const { isToggled } = useContext(ToggleContext)
@@ -50,7 +50,7 @@ export default function Dropdown({ socialOptions }) {
         padding: "10px 20px",
         width: "100%",
         textAlign: "center",
-        color: isToggled ? "black" : "black",
+        color: isToggled ? "white" : "black",
         cursor: "pointer",
         transition: "background-color 0.3s ease",
     };

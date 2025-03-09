@@ -141,7 +141,7 @@ export default function Signup() {
                         </p>
                     )}
                     <br />
-                    <Link to='/dashboard'>
+                    <Link to='/token-holders'>
                     <button onClick={() => {
                         return (
                             // setGenerateKeyword(true),
