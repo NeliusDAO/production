@@ -50,7 +50,7 @@ export default function Dropdown({ socialOptions }) {
         padding: "10px 20px",
         width: "100%",
         textAlign: "center",
-        color: isToggled ? "white" : "black",
+        color: isToggled ? "black" : "black",
         cursor: "pointer",
         transition: "background-color 0.3s ease",
     };
@@ -87,8 +87,12 @@ export default function Dropdown({ socialOptions }) {
                             className="options"
                             onClick={() => handleOptionClick(socials.social)}
                             style={optionItemStyle}
-                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#02AFF3"}
-                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#fff"}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = "#02AFF3"
+                                e.currentTarget.style.color = "#fff"}}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = "#fff"
+                                e.currentTarget.style.color = "#000"}}
                         >
                             {socials.social}
                         </div>

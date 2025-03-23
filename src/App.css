@@ -447,7 +447,7 @@ input:checked+.slider:before {
 
 /* BLUEPRINT */
 
-/* @media screen and (min-width : 500px) {
+@media screen and (max-width : 500px) {
     #blueprintImage {
     height: 60%;
     width: 60%;
@@ -461,9 +461,9 @@ input:checked+.slider:before {
 
   .stageCard #cardText {
     width: 100%;
-    font-size: xx-small;
+    font-size: small;
   }
-} */
+}
 
 @media screen and (max-width: 700px) {
   /* #blueprintImage {
@@ -557,8 +557,8 @@ input:checked+.slider:before {
 }
 
 .blueprintImage {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 90%;
   max-width: 150px; /* Adjust the max-width as needed */
 }
 
@@ -945,12 +945,12 @@ input:checked+.slider:before {
 
 @media screen and (min-width : 450px) {
   #faq-answer {
-    font-size: 12px;
+    font-size: 13px;
     margin-left: 50px;
   }
 
   #question {
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 10px;
   }
 }
