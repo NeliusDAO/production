@@ -69,8 +69,7 @@ export default function Dropdown({ socialOptions }) {
             <div className="customSelect" style={{ display: "flex", justifyContent: "center", position: "relative" }}>
                 <div
                     className="select"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
+                    onClick={handleMouseEnter}
                     style={selectStyle}
                 >
                     <p>Select an Option To Connect</p>
