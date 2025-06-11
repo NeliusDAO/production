@@ -89,7 +89,7 @@ export default function Nav2({ about, home }) {
                             </button>
                         </li>
                     </Link>
-                    <Link to="token-holders">
+                    {/* <Link to="token-holders">
                         <li className="list-items" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                             <button
                                 className="buttons"
@@ -102,7 +102,7 @@ export default function Nav2({ about, home }) {
                                 {about}
                             </button>
                         </li>
-                    </Link>
+                    </Link> */}
                     <li className="toggle-list" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                         <ToggleSwitch setIsToggled={setIsToggled} />
                     </li>
