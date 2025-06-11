@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer style={!isToggled ? dark : {}}>
       <div className="date">
-        <p>© 2023 Nelius. All rights reserved</p>
+        <p>© 2025 Nelius. All rights reserved</p>
       </div>
       <div className="footer-socials">
         <Link
