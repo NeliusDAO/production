@@ -3,10 +3,11 @@ import { ToggleProvider } from './components/ToggleContext';
 import Nav2 from './components/Nav2';
 import Footer from './components/Footer';
 import EventOwners from './pages/EventOwners';
+import { useEffect } from "react";
 import { Route, Routes } from 'react-router-dom';
 import TokenHolders from './pages/TokenHolders';
 import Signup from './modals/Signup';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Login from './modals/Login';
 import Dashboard from './components/Dashboard';
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <ToggleProvider>
+      <RedirectHandler />
       <div className={isModalPath ? "modal-overlay" : ""}>
         <Routes>
           <Route path='/*' element={<Pages/>} />
@@ -27,6 +29,19 @@ function App() {
       </div>
     </ToggleProvider>
   );
+}
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/preprodcution") {
+      navigate("/", { replace: true });
+    }
+  }, [location, navigate]);
+
+  return null;
 }
 
 const Pages = () => {
