@@ -89,7 +89,7 @@ const InfoImg = () => {
     };
 
     return (
-        <div className="imageGrids">
+        <div className="imageGrids" id="criteria">
             <div id="info_back">
                 <p id="infoText" className="infoText textOne" style={!isToggled ? text : {}}>Criteria For Events Nomination</p>
                 {isMobile ? (

@@ -1,10 +1,7 @@
-export default function Submit(props) {
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
-
+export default function Submit({ button, handleSubmit }) {
     return (
-        <button className="buttonComponent" onClick={handleSubmit}>{ props.button }</button>
-    )
-};
+        <button className="buttonComponent" onClick={handleSubmit}>
+            {button}
+        </button>
+    );
+}

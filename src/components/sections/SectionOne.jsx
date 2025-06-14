@@ -33,10 +33,10 @@ export default function SectionOne() {
                         <p className="headText">With <span className="textOne">Nelius</span></p>
                     </div>
                     <div className="sectionOneParagraph">
-                        <p className="headParagraph">With Nelius, your events can get effective publicity and funding.</p>
+                        <p className="headParagraph">With Nelius, events can get effective publicity and funding.</p>
                     </div>
                     <div className="sectionOneButton">
-                        <Link to="#subscribe" smooth><Button button='Get Started' /></Link>
+                        <Link to="#criteria" smooth><Button button='Get Started' /></Link>
                     </div>
                 </div>
             </div>
