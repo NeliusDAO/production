@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ToggleContext } from "./ToggleContext";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   const { isToggled } = useContext(ToggleContext);
   const dark = {
     // backgroundColor: '#0c0c3f',
@@ -16,7 +17,7 @@ export default function Footer() {
   return (
     <footer style={!isToggled ? dark : {}}>
       <div className="date">
-        <p>© 2025 Nelius. All rights reserved</p>
+        <p>© {year} Nelius. All rights reserved</p>
       </div>
       <div className="footer-socials">
         <Link

@@ -75,7 +75,7 @@ export default function Nav2({ about, home }) {
             </div>
             <div className={`nav-list ${isOpen ? 'open' : ''}`}>
                 <ul className="lists">
-                    <Link to="/">
+                    {/* <Link to="/">
                         <li className="list-items" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                             <button
                                 className="buttons"
@@ -88,7 +88,7 @@ export default function Nav2({ about, home }) {
                                 {home}
                             </button>
                         </li>
-                    </Link>
+                    </Link> */}
                     {/* <Link to="token-holders">
                         <li className="list-items" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                             <button

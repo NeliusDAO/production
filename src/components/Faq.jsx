@@ -2,14 +2,15 @@ import React, { useState, useContext } from 'react';
 import { ToggleContext } from './ToggleContext';
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
+    const { isToggled } = useContext(ToggleContext);
 
     return (
-        <div className="faq-item" style={{ color: 'black' }}>
+        <div className="faq-item" style={{ color: !isToggled ? 'white' : 'black', backgroundColor: !isToggled ? '#010101' : 'white' }}>
             <div className="faq-question" onClick={onClick}>
                 <span className="faq-icon" onClick={onClick}>{isOpen ? '-' : '+'}</span>
-                <span className='question' id='question'>{question}</span>
+                <span className='question' id='question' style={{ color: !isToggled ? 'white' : 'black' }}>{question}</span>
             </div>
-            {isOpen && <div className="faq-answer" id='faq-answer'>{answer}</div>}
+            {isOpen && <div className="faq-answer" id='faq-answer' style={{ color: !isToggled ? 'white' : 'black' }}>{answer}</div>}
         </div>
     );
 };
