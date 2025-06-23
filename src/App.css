@@ -349,7 +349,7 @@ input:checked+.slider:before {
 
 .textOne {
   /* Simplified gradient background for .textOne */
-  background: linear-gradient(-45deg, #FEFEFE, #02AFF3, #cdd6d8);
+  background: linear-gradient(-45deg, #B7AAAA, #02AFF3, #cdd6d8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
