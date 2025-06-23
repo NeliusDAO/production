@@ -54,7 +54,7 @@ a {
 .social-items {
   display: flex;
   align-items: center;
-  gap: 20px;
+  column-gap: 20px;
   padding: 15px;
 }
 
@@ -299,6 +299,21 @@ input:checked+.slider:before {
   }
 }
 
+@media screen and (min-width : 700px) and (max-width : 840px) {
+  .sectionOneHeadText .headText {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 0.5rem;
+  }
+
+  .sectionOneParagraph .headParagraph {
+    display: inline-block;
+    width: 90%;
+    font-size: medium;
+    font-weight: 400;
+  }
+}
+
 .circleBackground {
   position: absolute;
   top: 50%;
@@ -488,7 +503,7 @@ input:checked+.slider:before {
   .blueprint .blueprintText {
     font-size: x-large;
     font-weight: 500;
-    margin: 50px 0px 0px 0px;
+    padding: 50px 0px 0px 0px;
   }
 
   .stageCard #cardText {
@@ -983,12 +998,12 @@ input:checked+.slider:before {
   }
 
   .faq-answer {
-    font-size: 8px;
+    font-size: xx-small;
     margin-left: 50px;
   }
 
   .question {
-    font-size: 8px;
+    font-size: xx-small;
     margin-left: 10px;
   }
 
@@ -1007,7 +1022,7 @@ input:checked+.slider:before {
 
   .faq-answer {
     font-size: 14px;
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   .faq-icon,

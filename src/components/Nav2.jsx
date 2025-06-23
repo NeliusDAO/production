@@ -3,14 +3,15 @@ import { ToggleContext } from './ToggleContext';
 import Logo from '../assets/img/logo/nelius_logo_nav.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 export default function Nav2({ about, home }) {
     const { isToggled, setIsToggled } = useContext(ToggleContext);
     const [isOpen, setIsOpen] = useState(false);
 
-    const location = useLocation();
-    const currentPath = location.pathname
+    // const location = useLocation();
+    // const currentPath = location.pathname
 
     const menuRef = useRef(null);
 
@@ -43,19 +44,19 @@ export default function Nav2({ about, home }) {
     //     background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), rgb(233, 241, 243), rgb(94, 110, 234))',
     // };
 
-    const stylesActive = {
-        borderRadius: '20px',
-        border: 'none',
-        background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), #02AFF3)',
-        color: '#010101',
-    };
+    // const stylesActive = {
+    //     borderRadius: '20px',
+    //     border: 'none',
+    //     background: 'linear-gradient(180deg, rgb(233, 241, 243), rgb(233, 241, 243), #02AFF3)',
+    //     color: '#010101',
+    // };
 
-    const stylesInactive = (isToggled) => ({
-        borderRadius: '20px',
-        border: 'none',
-        background: 'transparent',
-        color: isToggled ? '#010101' : 'white',
-    });
+    // const stylesInactive = (isToggled) => ({
+    //     borderRadius: '20px',
+    //     border: 'none',
+    //     background: 'transparent',
+    //     color: isToggled ? '#010101' : 'white',
+    // });
 
     // const styles1 = {
     //     borderRadius: '20px',
@@ -75,7 +76,7 @@ export default function Nav2({ about, home }) {
             </div>
             <div className={`nav-list ${isOpen ? 'open' : ''}`}>
                 <ul className="lists">
-                    <Link to="/">
+                    {/* <Link to="/">
                         <li className="list-items" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                             <button
                                 className="buttons"
@@ -88,7 +89,7 @@ export default function Nav2({ about, home }) {
                                 {home}
                             </button>
                         </li>
-                    </Link>
+                    </Link> */}
                     {/* <Link to="token-holders">
                         <li className="list-items" style={{ backgroundColor: isToggled ? 'white' : 'black' }}>
                             <button
