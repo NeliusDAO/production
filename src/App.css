@@ -19,6 +19,7 @@
   border-radius: 25px;
   color: white;
   background: #02AFF3;
+  text-transform: capitalize;
 }
 
 a {
@@ -463,7 +464,7 @@ input:checked+.slider:before {
 /* BLUEPRINT */
 
 @media screen and (max-width : 500px) {
-    #blueprintImage {
+  #blueprintImage {
     height: 60%;
     width: 60%;
   }
@@ -574,18 +575,21 @@ input:checked+.slider:before {
 .blueprintImage {
   width: 90%;
   height: 90%;
-  max-width: 150px; /* Adjust the max-width as needed */
+  max-width: 150px;
+  /* Adjust the max-width as needed */
 }
 
 @media screen and (max-width: 700px) {
   .blueprintImage {
-    max-width: 100px; /* Adjust the max-width for smaller screens */
+    max-width: 100px;
+    /* Adjust the max-width for smaller screens */
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1160px) {
   .blueprintImage {
-    max-width: 120px; /* Adjust the max-width for medium screens */
+    max-width: 120px;
+    /* Adjust the max-width for medium screens */
   }
 }
 
@@ -896,6 +900,53 @@ input:checked+.slider:before {
   font-size: 18px;
   font-weight: 500;
 }
+
+/* COMMUNITY */
+
+@media screen and (max-width : 700px) {
+
+  #community {
+    display: block;
+    text-align: center;
+    padding: 0px 50px 50px 50px;
+  }
+
+  .communityHead #headText {
+    font-size: 45px;
+  }
+
+  .communityText #bodyText {
+    font-size: medium;
+    padding-bottom: 20px;
+  }
+
+  #communityBtn {
+    font-size: small;
+    width: fit-content;
+    padding: 5px 20px;
+  }
+}
+
+.community {
+  display: block;
+  text-align: center;
+  padding: 0px 100px 50px 100px;
+}
+
+.communityHead h2 {
+  text-transform: capitalize;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.communityText p {
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+
 
 /* FAQ */
 
