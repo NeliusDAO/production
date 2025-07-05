@@ -124,10 +124,10 @@ export default function Subscribe() {
 
     return (
         <div className="subscribe" id="subscribe" style={!isToggled ? dark : {}}>
-            <p className="subscribeHead">
+            <p className="subscribeHead" id="subscribeHead">
                 Ready To Get <span style={!isToggled ? text : {}} className="textOne">Funded</span>?
             </p>
-            <p className="subscribeText">
+            <p className="subscribeText" id="subscribeText">
                 Enter your email for early access. Our team {isMobile ? '' : <br />} will get in touch for personal branding.
             </p>
 
