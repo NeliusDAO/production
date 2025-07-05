@@ -287,7 +287,7 @@ input:checked+.slider:before {
 
 @media screen and (max-width : 700px) {
   .sectionOneHeadText .headText {
-    font-weight: 500;
+    font-weight: 700;
     font-size: x-large;
     line-height: 0.5rem;
   }
@@ -302,7 +302,7 @@ input:checked+.slider:before {
 
 @media screen and (min-width : 700px) and (max-width : 840px) {
   .sectionOneHeadText .headText {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 50px;
     line-height: 0.5rem;
   }
@@ -343,7 +343,7 @@ input:checked+.slider:before {
 }
 
 .sectionOneHeadText p {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 64px;
   line-height: 2rem;
 }
@@ -503,7 +503,7 @@ input:checked+.slider:before {
 
   .blueprint .blueprintText {
     font-size: x-large;
-    font-weight: 500;
+    font-weight: 700;
     padding: 50px 0px 0px 0px;
   }
 
@@ -521,7 +521,7 @@ input:checked+.slider:before {
 
   .blueprint .blueprintText {
     font-size: xx-large;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
   }
 
@@ -560,7 +560,7 @@ input:checked+.slider:before {
 
 .blueprintText {
   font-size: 64px;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -602,7 +602,7 @@ input:checked+.slider:before {
 
   #whitepaperText {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
     text-transform: capitalize;
   }
@@ -630,7 +630,7 @@ input:checked+.slider:before {
 
   #whitepaperText {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
     text-transform: capitalize;
   }
@@ -660,7 +660,7 @@ input:checked+.slider:before {
 
 .whitepaperText {
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   text-transform: capitalize;
 }
@@ -814,6 +814,59 @@ input:checked+.slider:before {
 
 /* SUBSCRIBE */
 
+@media screen and (max-width : 700px) {
+  #subscribeHead {
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  #subscribeText {
+    font-size: small;
+    font-weight: 500;
+    padding: 20px 30px 0px 30px;
+  }
+
+  .inputContainer .emailInput {
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    padding-left: 15px;
+  }
+
+  .inputContainer .emailInput::placeholder {
+    font-size: 15px;
+  }
+
+  .form {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width : 701px) and (max-width : 1160px) {
+  .subscribeHead {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  .subscribeText {
+    font-size: medium;
+    font-weight: 500;
+    padding: 0px 30px;
+  }
+
+  .inputContainer .emailInput::placeholder {
+    font-size: 18px;
+  }
+
+  .form {
+    margin-top: 50px;
+  }
+}
+
 .subscribe {
   display: block;
   align-items: center;
@@ -824,7 +877,7 @@ input:checked+.slider:before {
 
 .subscribeHead {
   font-size: 64px;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   padding-top: 50px;
 }
@@ -842,37 +895,6 @@ input:checked+.slider:before {
 
 .emailInput.dark-placeholder::placeholder {
   color: white;
-}
-
-@media screen and (max-width : 700px) {
-
-  .subscribeHead {
-    font-size: x-large;
-    font-weight: 500;
-    margin: 0;
-    padding-top: 50px;
-  }
-
-  .subscribeText {
-    font-size: small;
-    font-weight: 500;
-    padding: 0px 30px;
-  }
-
-  .inputContainer .emailInput {
-    font-size: 10px;
-    width: 200px;
-    height: 50px;
-    padding-left: 15px;
-  }
-
-  .inputContainer .emailInput::placeholder {
-    font-size: 10px;
-  }
-
-  .form {
-    margin-top: 50px;
-  }
 }
 
 .inputContainer {
@@ -911,12 +933,16 @@ input:checked+.slider:before {
     padding: 0px 50px 50px 50px;
   }
 
+  #absoluteLogo {
+    display: none;
+  }
+
   .communityHead #headText {
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .communityText #bodyText {
-    font-size: medium;
+    font-size: small;
     padding-bottom: 20px;
   }
 
@@ -927,10 +953,46 @@ input:checked+.slider:before {
   }
 }
 
+@media screen and (min-width : 701px) and (max-width : 1160px) {
+  #absoluteLogo {
+    margin: 50px 80px 0 0;
+  }
+
+  .communityHead #headText {
+    font-size: 55px;
+  }
+
+  .communityText #bodyText {
+    font-size: large;
+    padding-bottom: 20px;
+  }
+
+  #communityBtn {
+    font-size: medium;
+    width: fit-content;
+    padding: 10px 30px;
+  }
+}
+
 .community {
+  position: relative;
   display: block;
   text-align: center;
   padding: 0px 100px 50px 100px;
+}
+
+/* Added: Make the image skew to the left to look real with shadow also */
+.absoluteLogo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 80px 200px 0 0;
+  z-index: 1;
+  /* Added skew and shadow for realism */
+  transform: skew(-15deg, 0deg);
+  box-shadow: -10px 10px 20px rgba(43, 43, 43, 0.15);
 }
 
 .communityHead h2 {
@@ -962,7 +1024,7 @@ input:checked+.slider:before {
 
 .faq .faq-head {
   flex: 0.5;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 64px;
   margin-left: 70px;
   /* background-color: aqua; */
@@ -1032,7 +1094,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   div.faq-item {
@@ -1095,7 +1157,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
   }
 }
 
@@ -1130,7 +1192,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
   }
 }
 

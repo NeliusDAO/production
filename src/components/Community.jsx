@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ToggleContext } from './ToggleContext';
 import { Link } from "react-router-dom";
+import Logo from '../assets/img/logo/logo_nelius.png'
 
 export default function Community() {
     const { isToggled } = useContext(ToggleContext);
@@ -17,6 +18,7 @@ export default function Community() {
 
     return (
         <div className="community" id="community" style={isToggled ? light : dark}>
+            <img src={Logo} alt="absoluteLogo" id="absoluteLogo" className="absoluteLogo" />
             <div className="communityHead">
                 <h2 id="headText">join our <span className="textOne">community</span></h2>
             </div>
