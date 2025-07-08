@@ -23,7 +23,7 @@ export default function Community() {
                 <h2 id="headText">join our <span className="textOne">community</span></h2>
             </div>
             <div className="communityText">
-                <p id="bodyText">Get updated on new event, giveaways and get answers to all your questions regarding the Nelius token</p>
+                <p id="bodyText">Get updated on new event, giveaways and get answers to all your questions regarding Nelius</p>
             </div>
             <div className="communityBtn">
                 <Link

@@ -109,7 +109,7 @@ export default function Subscribe() {
 
             async function delaySubscribeMessage() {
                 await sleep(1500);
-                setMessage("");   
+                setMessage("");
             }
 
             function sleep(milliseconds) {
@@ -143,7 +143,7 @@ export default function Subscribe() {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <Submit button="Subscribe" handleSubmit={handleSubmit} />
-                    {message && <p className="mt-2 text-sm">{message}</p>}
+                    {message && <p className="validateMessage">{message}</p>}
                 </div>
             </form>
         </div>
