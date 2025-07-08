@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c678981.css",
-    "main.js": "/static/js/main.57ed1495.js",
+    "main.css": "/static/css/main.3313900c.css",
+    "main.js": "/static/js/main.24b19a65.js",
     "static/js/453.fb7e8eb3.chunk.js": "/static/js/453.fb7e8eb3.chunk.js",
     "static/media/doveDark.svg": "/static/media/doveDark.73c0c30508815bc2f07881e5fb93516b.svg",
     "static/media/plantDark.svg": "/static/media/plantDark.8f68c9a310a3e8a95897515d6773caa8.svg",
@@ -19,6 +19,7 @@
     "static/media/pic 1carousel.png": "/static/media/pic 1carousel.665400f0f6b5b01ddb1c.png",
     "static/media/five.svg": "/static/media/five.5a8cab8264050352bf4e16020e70f12c.svg",
     "static/media/nelius_logo_nav.png": "/static/media/nelius_logo_nav.8f83b2618dd7860b0a21.png",
+    "static/media/logo_nelius.png": "/static/media/logo_nelius.c1639c9baa31184af818.png",
     "static/media/three.svg": "/static/media/three.984d5e74595f81c3c0db0074d1932106.svg",
     "static/media/four.svg": "/static/media/four.61cfd7c6d619e8717e9515205a1201e8.svg",
     "static/media/two.svg": "/static/media/two.986593ee7193e8106dcb99b2f15891e6.svg",
@@ -26,12 +27,12 @@
     "static/media/light_mode.svg": "/static/media/light_mode.fca2fb7e597c271df538.svg",
     "index.html": "/index.html",
     "static/media/dark_mode.svg": "/static/media/dark_mode.133969e1ca9bf09882d4.svg",
-    "main.7c678981.css.map": "/static/css/main.7c678981.css.map",
-    "main.57ed1495.js.map": "/static/js/main.57ed1495.js.map",
+    "main.3313900c.css.map": "/static/css/main.3313900c.css.map",
+    "main.24b19a65.js.map": "/static/js/main.24b19a65.js.map",
     "453.fb7e8eb3.chunk.js.map": "/static/js/453.fb7e8eb3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c678981.css",
-    "static/js/main.57ed1495.js"
+    "static/css/main.3313900c.css",
+    "static/js/main.24b19a65.js"
   ]
 }
