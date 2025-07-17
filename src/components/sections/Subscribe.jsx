@@ -7,6 +7,7 @@ export default function Subscribe() {
     const { isToggled } = useContext(ToggleContext);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
 
     const dark = {
@@ -94,17 +95,19 @@ export default function Subscribe() {
             return;
         }
 
+        setLoading(true); // Start loading
+
         try {
             console.log(email);
             const res = await saveToGoogleSheet(email);
 
             if (res.status === "duplicate") {
-            setMessage("You've already subscribed with this email.");
+                setMessage("You've already subscribed with this email.");
             } else if (res.status === "success") {
-            setMessage("Subscription successful!");
-            setEmail(""); // clear input
+                setMessage("Subscription successful!");
+                setEmail(""); // clear input
             } else {
-            setMessage("Something went wrong. Try again.");
+                setMessage("Something went wrong. Try again.");
             }
 
             async function delaySubscribeMessage() {
@@ -116,9 +119,11 @@ export default function Subscribe() {
                 return new Promise(resolve => setTimeout(resolve, milliseconds));
             }
 
-            delaySubscribeMessage();
+            await delaySubscribeMessage();
         } catch (error) {
             setMessage("There was a problem with your subscription. Try again.");
+        } finally {
+            setLoading(false); // End loading
         }
     };
 
@@ -131,7 +136,7 @@ export default function Subscribe() {
                 Enter your email for early access. Our team {isMobile ? '' : <br />} will get in touch for personal branding.
             </p>
 
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <div className="inputContainer">
                     <input
                         type="email"
@@ -141,9 +146,16 @@ export default function Subscribe() {
                         style={!isToggled ? mail : {}}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        disabled={loading}
                     />
-                    <Submit button="Subscribe" handleSubmit={handleSubmit} />
-                    {message && <p className="validateMessage">{message}</p>}
+                    <Submit button="Subscribe" handleSubmit={handleSubmit} disable={loading} />
+                    {loading && (
+                        <div style={{display : 'flex', justifyContent: 'center', alignItems: 'center', columnGap: '10px'}}>
+                            <p>Please be patient while you submit Email address</p>
+                            <div className="loading"></div>
+                        </div>
+                    )}
+                    {!loading && message && <p className="validateMessage">{message}</p>}
                 </div>
             </form>
         </div>
