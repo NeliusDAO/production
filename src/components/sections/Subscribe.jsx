@@ -1,42 +1,44 @@
 import { useState, useEffect } from "react";
 import Submit from "../../assets/Submit";
 import { useContext } from "react";
-import { ToggleContext } from '../ToggleContext';
+import { ToggleContext } from "../ToggleContext";
 
 export default function Subscribe() {
     const { isToggled } = useContext(ToggleContext);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState("");
 
     const dark = {
-        backgroundColor: '#010101',
-        color: 'white',
+        backgroundColor: "#010101",
+        color: "white",
     };
 
     const mail = {
-        backgroundColor: '#010101',
-        color: 'white',
-        border: 'white solid 1px'
+        backgroundColor: "#010101",
+        color: "white",
+        border: "white solid 1px",
     };
 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
-        window.addEventListener('resize', handleResize);
+
+        window.addEventListener("resize", handleResize);
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
     const text = {
-        color: 'white',
-        background: 'linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #FEFEFE, #FEFEFE)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
+        color: "white",
+        background:
+            "linear-gradient(-45deg, #FEFEFE, #02AFF3, #02AFF3, #FEFEFE, #FEFEFE)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
     };
 
     const validateEmail = (email) => {
@@ -49,98 +51,81 @@ export default function Subscribe() {
         const apiKey = process.env.REACT_APP_SUBSCRIBE_API_KEY;
 
         const formData = new FormData();
-        // // formData.append("entry.1297518056", email);
-        formData.append("email", email)
+        formData.append("email", email);
         formData.append("apiKey", apiKey);
 
         try {
             const response = await fetch(endpoint, {
-            method: "POST",
-            body: formData,
+                method: "POST",
+                body: formData,
             });
-
-        const result = await response.json();
-        console.log(result);
-        return result;
-
+            const result = await response.json();
+            console.log(result);
+            return result;
         } catch (err) {
             console.error("Error:", err);
-            setMessage("Subscription failed. Check your connection.");
+            throw new Error("Network error occurred");
         }
-        };
-
-        // const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKeBPw519fk6uUvLIzB7yODFwz0TXXv3r5bE9hLI6kuIH71g/formResponse";
-        // const formData = new FormData();
-        // formData.append("entry.1297518056", email);
-        // formData.append("apiKey", apiKey);
-
-    //     try {
-    //         await fetch(formUrl, {
-    //             method: "POST",
-    //             mode: "no-cors",
-    //             body: formData,
-    //         });
-    //         console.log("Email saved to Google Sheets");
-    //     } catch (err) {
-    //         console.error("Google Sheets Error:", err);
-    //         throw new Error("Saving to sheet failed");
-    //     }
-    // };
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!validateEmail(email)) {
             setMessage("Please enter a valid email address.");
             return;
         }
 
-        setLoading(true); // Start loading
-
+        setLoading(true);
         try {
             console.log(email);
             const res = await saveToGoogleSheet(email);
 
+            // Set loading to false BEFORE setting messages
+            setLoading(false);
+
             if (res.status === "duplicate") {
                 setMessage("You've already subscribed with this email.");
             } else if (res.status === "success") {
-                setMessage("Subscription successful!");
-                setEmail(""); // clear input
+                setMessage(`"${email}" Subscribed Successfully!`);
+                setEmail("");
             } else {
                 setMessage("Something went wrong. Try again.");
             }
+        } catch (error) {
+            setLoading(false);
+            setMessage("There was a problem with your subscription. Try again.");
 
-            async function delaySubscribeMessage() {
-                await sleep(1500);
+            // Clear error message after delay
+            async function delayErrorMessage() {
+                await sleep(3000);
                 setMessage("");
             }
-
             function sleep(milliseconds) {
-                return new Promise(resolve => setTimeout(resolve, milliseconds));
+                return new Promise((resolve) => setTimeout(resolve, milliseconds));
             }
-
-            await delaySubscribeMessage();
-        } catch (error) {
-            setMessage("There was a problem with your subscription. Try again.");
-        } finally {
-            setLoading(false); // End loading
+            await delayErrorMessage();
         }
     };
 
     return (
         <div className="subscribe" id="subscribe" style={!isToggled ? dark : {}}>
             <p className="subscribeHead" id="subscribeHead">
-                Ready To Get <span style={!isToggled ? text : {}} className="textOne">Funded</span>?
+                Ready To Get{" "}
+                <span style={!isToggled ? text : {}} className="textOne">
+                    Funded
+                </span>
+                ?
             </p>
             <p className="subscribeText" id="subscribeText">
-                Enter your email for early access. Our team {isMobile ? '' : <br />} will get in touch for personal branding.
+                Enter your email for early access. Our team {isMobile ? "" : <br />}{" "}
+                will get in touch for personal branding.
             </p>
 
             <form className="form" onSubmit={handleSubmit}>
                 <div className="inputContainer">
                     <input
                         type="email"
-                        className={`emailInput ${!isToggled ? 'dark-placeholder' : ''}`}
+                        className={`emailInput ${!isToggled ? "dark-placeholder" : ""}`}
                         id="emailInput"
                         placeholder="Enter email"
                         style={!isToggled ? mail : {}}
@@ -148,14 +133,26 @@ export default function Subscribe() {
                         onChange={(e) => setEmail(e.target.value)}
                         disabled={loading}
                     />
-                    <Submit button="Subscribe" handleSubmit={handleSubmit} disable={loading} />
-                    {loading && (
-                        <div style={{display : 'flex', justifyContent: 'center', alignItems: 'center', columnGap: '10px'}}>
-                            <p>Please be patient while you submit Email address</p>
+                    <Submit
+                        button="Subscribe"
+                        handleSubmit={handleSubmit}
+                        disable={loading}
+                    />
+                    {loading ? (
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                columnGap: "10px",
+                            }}
+                        >
+                            <p>Please be patient while we submit your Email address...</p>
                             <div className="loading"></div>
                         </div>
+                    ) : (
+                        message && <p className="validateMessage">{message}</p>
                     )}
-                    {!loading && message && <p className="validateMessage">{message}</p>}
                 </div>
             </form>
         </div>

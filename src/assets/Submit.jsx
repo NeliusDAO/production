@@ -1,12 +1,3 @@
-// export default function Submit({ button, handleSubmit, disable }) {
-//     return (
-//         <button className="buttonComponent" onClick={handleSubmit} disabled={disable}>
-//             {button}
-//         </button>
-//     );
-// }
-
-
 export default function Submit({ button, handleSubmit, disable }) {
     return (
         <button className="buttonComponent" onClick={handleSubmit} disabled={disable}>
