@@ -36,7 +36,7 @@ export default function SectionOne() {
                         <p className="headParagraph">With Nelius, events can get effective publicity and funding.</p>
                     </div>
                     <div className="sectionOneButton">
-                        <Link to="#criteria" smooth><Button button='Get Started' /></Link>
+                        <Link to="#subscribe" smooth><Button button='Get Started' /></Link>
                     </div>
                 </div>
             </div>
