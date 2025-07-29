@@ -86,7 +86,7 @@ export default function Subscribe() {
             if (res.status === "duplicate") {
                 setMessage("You've already subscribed with this email.");
             } else if (res.status === "success") {
-                setMessage(`"${email}" Subscribed Successfully!`);
+                setMessage(`✅ You're in! Check ${email} for a welcome note`);
                 setEmail("");
             } else {
                 setMessage("Something went wrong. Try again.");
@@ -147,7 +147,7 @@ export default function Subscribe() {
                                 columnGap: "10px",
                             }}
                         >
-                            <p>Please be patient while we submit your Email address...</p>
+                            <p>	✔️ One sec — subscribing you now!</p>
                             <div className="loading"></div>
                         </div>
                     ) : (
