@@ -27,7 +27,7 @@ export default function Community() {
             </div>
             <div className="communityBtn">
                 <Link
-                    to="https://t.me/neliusdao"
+                    to="https://t.me/+P9j1f85xo1ExZTk0"
                     target="_blank"
                     rel="noopener noreferrer">
                     <button className="buttonComponent extra" id="communityBtn">
