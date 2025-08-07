@@ -22,6 +22,26 @@
   text-transform: capitalize;
 }
 
+.buttonComponent:hover {
+  background: #018BC6;
+  cursor: pointer;
+}
+
+.buttonComponent:active {
+  background: #0173A3;
+  transform: scale(0.98);
+}
+
+.whitepaperDownload:active {
+  background: #89d5f5;
+  cursor: pointer;
+}
+
+.whitepaperDownload:hover {
+  background: #89d5f5;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -638,6 +658,10 @@ input:checked+.slider:before {
     width: 16px;
     height: 16px;
     align-items: center;
+  }
+
+  #downloadText {
+    font-size : 11px;
   }
 }
 
