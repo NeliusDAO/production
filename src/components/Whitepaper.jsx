@@ -56,7 +56,7 @@ export default function Whitepaper() {
         />{" "}
         Download Document
       </button>
-      {isDownloaded && <p id="downloadText">Thank you for downloading the Nelius Whitepaper</p>}
+      {isDownloaded && <p id="downloadText">Whitepaper downloaded – happy reading!</p>}
     </div>
   );
 }
